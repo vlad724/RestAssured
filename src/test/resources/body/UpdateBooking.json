@@ -1,0 +1,11 @@
+{
+  "firstname": "James Jose",
+  "lastname": "Diaz Periñon",
+  "totalprice": 6000,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2024-08-19",
+    "checkout": "2024-08-30"
+  },
+  "additionalneeds": "For Free"
+}

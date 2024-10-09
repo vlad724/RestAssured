@@ -66,4 +66,25 @@ public class RestAssuredHelper {
         }
         return stringData;
     }
+
+    public String getSchemaBody(String file){
+        String bodyPath;
+        try {
+            bodyPath = new String(Files.readAllBytes(Paths.get(getCurrentPath()
+                    +"/src/test/resources/schemas/" + file)));
+        } catch (Exception e) {
+            throw new SkipException("check configProperties or path variable " + e.getMessage());
+        }
+
+        return bodyPath;
+    }
+
+
+    public JSONObject setCredentials(){
+        JSONObject credentials = new JSONObject();
+        credentials.put("username", "admin");
+        credentials.put("password", "password123");
+
+        return credentials;
+    }
 }
